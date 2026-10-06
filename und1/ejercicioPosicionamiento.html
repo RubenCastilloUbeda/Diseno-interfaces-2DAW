@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            transition: all 0.5s;
+        }
+
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: peru;
+            border: 1px solid white;
+            box-shadow: 0 0 10px black;
+            font-size: 5rem;
+            font-weight: bold;
+            color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 0 0 1 black;
+            overflow: hidden;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: wrap;
+        }
+
+        div::before{
+            content: "+";
+            position: relative;
+            top: 150px;
+        }
+
+        #c1{
+            background: url("https://picsum.photos/400") center center no-repeat;
+        }
+
+        #c1:hover{
+            background-position: 0 0;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div id="c1"></div>
+    <div id="c2"></div>
+    <div id="c3"></div>
+    <div id="c4"></div>
+    <div id="c5"></div>
+    <div id="c6"></div>
+    <div id="c7"></div>
+    <div id="c8"></div>
+    <div id="c9"></div>
+
+
+</body>
+</html>
