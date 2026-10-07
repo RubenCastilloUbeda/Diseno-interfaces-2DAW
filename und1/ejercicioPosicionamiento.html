@@ -25,7 +25,7 @@
             text-shadow: 0 0 1 black;
             overflow: hidden;
         }
-
+/* 1. efecto ocultar texto y mostrar el texto con el hover*/
         body{
             display: flex;
             justify-content: center;
@@ -33,10 +33,14 @@
             flex-flow: wrap;
         }
 
-        div::before{
-            content: "+";
+        #c1::before{
+            content: "Hola";
             position: relative;
             top: 150px;
+        }
+
+        #c1:hover::before{
+            top: 0%;
         }
 
         #c1{
@@ -47,12 +51,32 @@
             background-position: 0 0;
             
         }
+        
+/*2. efecto mostrar un texto al hacer hover */
+        div#c2{
+            font-size: 1.3rem;
+            p{
+                position: relative;
+                right: 100%;
+            }
+        }
+
+        div#c2:hover p{
+            right: 0%;
+        }
+
+/*3. cambiar tamaño + rotar caja con efecto*/
+        #c3:hover{
+            transform: scale(0.5,1) rotate(40deg) ;
+        }
 
     </style>
 </head>
 <body>
     <div id="c1"></div>
-    <div id="c2"></div>
+    <div id="c2">
+        <p>Más información</p>
+    </div>
     <div id="c3"></div>
     <div id="c4"></div>
     <div id="c5"></div>
