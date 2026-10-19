@@ -1,0 +1,43 @@
+/* para los titulos roboto slab, sacar de fuentes google
+para los textos roboto */
+
+:root {
+    --negro: black;
+    --blanco: white;
+    --azulClaro: #18acc6;
+    --grisOscuro: #222;
+    --grisClaro: #666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .5s;
+}
+
+body,html {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+
+h1,h2,h3{
+    font-family: "Roboto Slab" serif ;
+    font-size: 2rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+header#header{
+
+}
+
+section#banner {
+    background-image: url('img/fondo.jpg');
+}
