@@ -1,0 +1,153 @@
+:root {
+    --negro: black;
+    --blanco: white;
+    --morado: #4834d4;
+    --crimson: crimson;
+    --grisOscuro: #222;
+    --grisClaro: #666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .5s;
+}
+
+body,html {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+
+h2{
+    font-size: 2rem;
+    color: var(--morado);
+}
+
+img {
+    max-width: 100%;
+}
+
+/*quitar linea de abajo de todos los enlaces */
+a {
+    text-decoration: none;
+}
+
+header#header {
+    /* modelo de caja */
+    /* width, height, margin, padding, display*/
+    max-width: 80%;
+    margin: auto;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color:yellow; */
+
+    nav.menu {
+        a {
+            color: var(--negro);
+            text-transform: uppercase;
+            font-weight: 900;
+            /* margin-left: 20px; */
+            border-left: solid 3px;
+            padding: 0 20px;
+            margin: 0 5px;
+
+            &:first-child {
+                border: none;
+            }
+
+            &:hover {
+                color: var(--morado);
+                border-color: var(--negro);
+
+            }
+        }
+    }
+}
+
+/* SECCION SERVICIOS */
+
+section.servicios {
+    padding: 50px 0;
+
+    div.arriba {
+        /* se le da un tamaño a la caja primero para luego centrarlo*/
+        max-width: 60%;
+        /* para centrar la caja en el centro*/
+        text-align: center;
+        margin: auto;
+        p{
+            margin-top: 20px;
+        }
+    }
+
+    div.abajo {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        border-bottom: solid black;
+
+        article{
+            width: 20%;
+            gap: 15px;
+            display: flex;
+            align-content: start;
+            align-items: end;
+            flex-wrap: wrap;
+        }
+
+        img {
+            max-width: 100px;
+        }
+    }
+}
+
+section.galeria {
+    min-height: 100vh;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+    h2{
+        width: 100%;
+        margin: 50px;
+    }
+
+    img{
+        margin: 20px;
+    }
+
+    p{
+        font-weight: 700;
+        color: var(--grisOscuro);
+    }
+
+    p+p {
+        font-weight: normal;
+        color: var(--grisClaro);
+        font-size: 1rem;
+    }
+}
+
+/* FOOTER */
+
+footer#footer {
+    background-color: var(--negro);
+    width: 100%;
+    padding: 100px 0;
+    text-align: center;
+
+    a{
+        color: var(--blanco);
+        margin: 0 20px;
+        /*& se refiere a si mismo, es decer al a cuando tiene hover*/
+        &:hover{
+            color: var(--morado);
+        }
+    }
+}
