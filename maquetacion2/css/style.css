@@ -22,7 +22,7 @@ body,html {
 }
 
 h1,h2,h3{
-    font-family: "Roboto Slab" serif ;
+    font-family: "Roboto Slab", serif !important ;
     font-size: 2rem;
 }
 
@@ -35,9 +35,116 @@ a {
 }
 
 header#header{
+    margin: auto;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    nav.menu{
+        text-transform: uppercase;
+        font-weight: 900;
+        display: flex;
+        justify-content: end;
+        gap: 7px;
+
+        a{
+            color: var(--grisOscuro);
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+    }
+
+    div.login{
+        background-color: #18acc6;
+        width: 110px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        a{
+            color: var(--blanco);
+            text-align: center;
+            margin: auto;
+        }
+    }
 
 }
 
 section#banner {
-    background-image: url('img/fondo.jpg');
+    background-image: url('../img/fondo.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover;      
+    background-position: center;
+    height: 400px;
+}
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+    gap: 15px;
+    h1{
+        font-size: 60px;
+    font-family: "Roboto Slab";    
+}
+    a{
+        color: var(--blanco);
+        border: solid 1px white;
+        border-radius: 20px;
+        padding: 5px;
+    }
+}
+
+section.informacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--grisOscuro);
+    gap: 15px;
+    margin: 15px;
+}
+
+section.servicios{
+    background-color: var(--azulClaro);
+    min-height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: var(--blanco);
+    font-size: 15px;
+
+    article{
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        margin: 15px;
+    }
+
+    p:first-child {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 25px;
+        width: 100%;
+        margin: auto;
+    }
+
+    img {
+        border: solid 2px white;
+        border-radius: 50px;
+        padding: 20px;
+        margin: 6px;
+    }
+}
+
+section.otros{
+    display: flex;
+    
 }
