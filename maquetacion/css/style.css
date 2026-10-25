@@ -20,7 +20,7 @@ body,html {
 }
 
 h2{
-    font-size: 2rem;
+    font-size: 24px;
     color: var(--morado);
 }
 
@@ -28,70 +28,117 @@ img {
     max-width: 100%;
 }
 
-/*quitar linea de abajo de todos los enlaces */
+/* quitar linea de abajo de todos los enlaces */
 a {
     text-decoration: none;
 }
 
+/* HEADER */
 header#header {
-    /* modelo de caja */
-    /* width, height, margin, padding, display*/
-    max-width: 80%;
+    max-width: 780px;
+    min-height: 75px;
     margin: auto;
-    padding: 50px 0;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color:yellow; */
+    gap: 20px;
+
+    div.logo{
+        width: 110px;
+
+        img{
+            display: block;
+        }
+    }
 
     nav.menu {
+        display: flex;
+
         a {
             color: var(--negro);
             text-transform: uppercase;
+            font-size: 11px;
             font-weight: 900;
-            /* margin-left: 20px; */
-            border-left: solid 3px;
-            padding: 0 20px;
-            margin: 0 5px;
+            border-left: solid 2px;
+            padding: 0 15px;
 
             &:first-child {
                 border: none;
+                color: var(--morado);
             }
 
             &:hover {
                 color: var(--morado);
                 border-color: var(--negro);
-
             }
         }
     }
 }
 
-/* SECCION SERVICIOS */
+/* BANNER */
+section#banner{
+    background-image: url('../img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 580px;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+    text-align: center;
+    gap: 15px;
 
+    h1{
+        font-size: 50px;
+        text-transform: uppercase;
+    }
+
+    p{
+        max-width: 600px;
+        font-size: 16px;
+    }
+
+    a{
+        background-color: var(--morado);
+        color: var(--blanco);
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 15px 55px;
+        margin-top: 25px;
+        border-radius: 2px;
+    }
+}
+
+/* SECCION SERVICIOS */
 section.servicios {
-    padding: 50px 0;
+    padding: 80px 20px 65px;
+    border-bottom: solid 1px #ddd;
 
     div.arriba {
-        /* se le da un tamaño a la caja primero para luego centrarlo*/
-        max-width: 60%;
-        /* para centrar la caja en el centro*/
+        max-width: 600px;
         text-align: center;
         margin: auto;
+
         p{
             margin-top: 20px;
+            color: var(--grisClaro);
         }
     }
 
     div.abajo {
+        max-width: 780px;
+        margin: 65px auto 0;
         display: flex;
-        justify-content: center;
-        gap: 20px;
-        border-bottom: solid black;
+        justify-content: space-between;
+        gap: 65px;
 
         article{
-            width: 20%;
-            gap: 15px;
+            width: 250px;
+            gap: 10px;
             display: flex;
             align-content: start;
             align-items: end;
@@ -99,55 +146,164 @@ section.servicios {
         }
 
         img {
-            max-width: 100px;
+            width: 50px;
+        }
+
+        h3{
+            font-size: 15px;
+            color: var(--grisClaro);
+        }
+
+        p{
+            width: 100%;
+            font-size: 12px;
+            color: var(--grisClaro);
         }
     }
 }
 
+/* GALERIA */
 section.galeria {
-    min-height: 100vh;
+    max-width: 800px;
+    margin: auto;
+    padding: 90px 20px 100px;
     gap: 20px;
     display: flex;
     justify-content: center;
-    align-content: center;
     flex-wrap: wrap;
     text-align: center;
 
     h2{
         width: 100%;
-        margin: 50px;
+        margin-bottom: 50px;
+    }
+
+    div{
+        width: 300px;
     }
 
     img{
-        margin: 20px;
+        display: block;
+        width: 100%;
     }
 
     p{
-        font-weight: 700;
+        margin-top: 20px;
+        font-size: 12px;
+        font-weight:bold;
         color: var(--grisOscuro);
     }
 
     p+p {
+        margin-top: 6px;
         font-weight: normal;
         color: var(--grisClaro);
-        font-size: 1rem;
+        font-size: 10px;
     }
 }
 
 /* FOOTER */
-
 footer#footer {
     background-color: var(--negro);
     width: 100%;
-    padding: 100px 0;
+    min-height: 250px;
+    padding: 100px 20px;
     text-align: center;
 
     a{
         color: var(--blanco);
-        margin: 0 20px;
-        /*& se refiere a si mismo, es decer al a cuando tiene hover*/
+        margin: 0 15px;
+
         &:hover{
             color: var(--morado);
+        }
+    }
+}
+
+/* Responsive para una tablet 850 y movil 600 */
+@media screen and (max-width: 850px){
+    header#header{
+        margin: 0 20px;
+    }
+
+    section.servicios div.abajo{
+        gap: 25px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    header#header{
+        flex-direction: column;
+        padding: 20px 0;
+
+        nav.menu{
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+
+            a{
+                padding: 0 10px;
+                font-size: 10px;
+            }
+        }
+    }
+
+    section#banner{
+        min-height: 450px;
+        padding: 50px 20px;
+
+        h1{
+            font-size: 32px;
+        }
+
+        p{
+            font-size: 14px;
+        }
+
+        a{
+            padding: 15px 40px;
+        }
+    }
+
+    section.servicios{
+        padding: 50px 20px;
+
+        div.abajo{
+            flex-direction: column;
+            max-width: 350px;
+            margin-top: 40px;
+            gap: 35px;
+
+            article{
+                width: 100%;
+            }
+
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+
+    section.galeria{
+        padding: 50px 20px 60px;
+        gap: 35px;
+
+        h2{
+            margin-bottom: 0;
+        }
+
+        div{
+            width: 100%;
+            max-width: 400px;
+        }
+    }
+
+    footer#footer{
+        min-height: 180px;
+        padding: 75px 15px;
+
+        a{
+            margin: 0 10px;
         }
     }
 }
